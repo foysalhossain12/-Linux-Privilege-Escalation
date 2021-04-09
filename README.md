@@ -1,7 +1,7 @@
 # Linux-Privilege-Escalation
 
 
-# 01: Readable /etc/shadow:
+# 🔥01: Readable /etc/shadow:
 
 The /etc/shadow file contains user password hashes and is usually readable only by the root user.
 
@@ -9,13 +9,13 @@ Note that the /etc/shadow file on the VM is world-readable:
 
 At first check permission of /etc/shadow file using :
 
-ls -l /etc/shadow
+     ls -l /etc/shadow
 
     -rw-r--rw- 1 root shadow 842 Apr  9 17:28 /etc/shadow
 
 Then , view the contents of the /etc/shadow file uisng :
 
-cat /etc/shadow
+              cat /etc/shadow
               
               root:$6$LRq2u1SvWmPgF$zCIh5qzquQ31ZcsL0ifM9GKh.pQRwHSKjJQSJI4Tkl5ELRHjqWTzag8upywqk.jT6/niiOIaMF9XW1/BnN55Y/:17298:0:99999:7:::
               daemon:*:17298:0:99999:7:::
@@ -45,7 +45,7 @@ cat /etc/shadow
 
 
 
-Each line of the file represents a user. A user's password hash (if they have one) can be found between the first and second colons (:) of each line.
+*** Each line of the file represents a user. A user's password hash (if they have one) can be found between the first and second colons (:) of each line.***
 
 Save the root user's hash to a file called hash.txt on your Kali VM and use john the ripper to crack it. You may have to unzip /usr/share/wordlists/rockyou.txt.gz first and run the command using sudo depending on your version of Kali:
 
