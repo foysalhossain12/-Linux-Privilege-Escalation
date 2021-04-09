@@ -3,9 +3,9 @@
 
 # 🔥01: Readable /etc/shadow:
 
-The /etc/shadow file contains user password hashes and is usually readable only by the root user.
+#### 👀The /etc/shadow file contains user password hashes and is usually readable only by the root user.
 
-Note that the /etc/shadow file on the VM is world-readable:
+Note:  the /etc/shadow file on the VM is world-readable
 
 At first check permission of /etc/shadow file using :
 
@@ -95,9 +95,9 @@ su root
 
 #### ⏰The /etc/passwd file contains information about user accounts. It is world-readable, but usually only writable by the root user. Historically, the /etc/passwd file contained user password hashes, and some versions of Linux will still allow password hashes to be stored there.
 
-Note that the /etc/passwd file is world-writable:
+Note : that the /etc/passwd file is world-writable
 
-At first check permission of /etc/passwd file using :
+At first check permission of /etc/passwd file using 
 
      ls -l /etc/passwd
 
@@ -116,7 +116,7 @@ Switch to the root user, using the new password:
 
 #### 👁️ Alternatively, copy the root user's row and append it to the bottom of the file, changing the first instance of the word "root" to "newroot" and placing the generated password hash between the first and second colon (replacing the "x").
 
-          user@debian:~$ cat /etc/passwd
+          user@debian:~$ nano /etc/passwd
           root:x:0:0:root:/root:/bin/bash
           daemon:x:1:1:daemon:/usr/sbin:/bin/sh
           bin:x:2:2:bin:/bin:/bin/sh
