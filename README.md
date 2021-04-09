@@ -57,7 +57,7 @@ Switch to the root user, using the cracked password:
 
 #### 😍Happy Hacking 😍
 
-# 02: writeable /etc/shadow 
+# 🔥02: writeable /etc/shadow 
 
 check the permssion of  /etc/shadow file using /etc/shadow. If you can edit the file , you can easily change the password of root .
 
