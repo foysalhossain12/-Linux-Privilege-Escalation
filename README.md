@@ -45,26 +45,26 @@ Then , view the contents of the /etc/shadow file uisng :
 
 
 
-*** Each line of the file represents a user. A user's password hash (if they have one) can be found between the first and second colons (:) of each line.***
+#### 👀Each line of the file represents a user. A user's password hash (if they have one) can be found between the first and second colons (:) of each line.
 
-Save the root user's hash to a file called hash.txt on your Kali VM and use john the ripper to crack it. You may have to unzip /usr/share/wordlists/rockyou.txt.gz first and run the command using sudo depending on your version of Kali:
+Save the root user's hash to a file called hash.txt on your Machine  and use john the ripper to crack it. You may have to unzip /usr/share/wordlists/rockyou.txt.gz first and run the command using sudo depending on your version of Kali:
 
-john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+     john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 
 Switch to the root user, using the cracked password:
 
-su root
+    su root
 
-Happy Hacking 
+#### 😍Happy Hacking 
 
 # 02: writeable /etc/shadow 
 
 check the permssion of  /etc/shadow file using /etc/shadow. If you can edit the file , you can easily change the password of root .
 
-    ls -l /etc/shadow 
+     ls -l /etc/shadow 
     -rw-r--rw- 1 root shadow 842 Apr  9 17:28 /etc/shadow
 
-Look : We can edit /etc/shadow file as we have  permission
+#### 👀 Look : We can edit /etc/shadow file as we have  permission
 
 Generate a new password hash with a password of your choice :
 
@@ -88,4 +88,4 @@ Switch to the root user, using the new password:
 
 su root
 
-Happy Hacking   (-_-)
+#### 😍Happy Hacking   (-_-)
