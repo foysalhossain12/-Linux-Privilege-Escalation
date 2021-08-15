@@ -217,8 +217,7 @@ Result :
     matching Defaults entries for falconfeast on inclusion:
     env_reset, mail_badpass,
     secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
-
-User falconfeast may run the following commands on inclusion:
+    User falconfeast may run the following commands on inclusion:
     (root) NOPASSWD: /usr/bin/socat
     
 # Step 2: Now check (root) NOPASSWD: /usr/bin/socat in GFTobins and use id 
