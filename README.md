@@ -213,6 +213,7 @@ Acording to Previous process we will use :sudo -l and then  check Shell Escape S
 # Step 1:
         sudo -l 
 Result :
+    
     matching Defaults entries for falconfeast on inclusion:
     env_reset, mail_badpass,
     secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
