@@ -220,7 +220,7 @@ Result :
     User falconfeast may run the following commands on inclusion:
     (root) NOPASSWD: /usr/bin/socat
     
-# Step 2: Now check (root) NOPASSWD: /usr/bin/socat in GFTobins and use id 
+# Step 2: Now check (root) NOPASSWD: /usr/bin/socat in GFTobins and use it 
 
 Here , socat is our target Shell Escape which use for connected other machine . For liseting socat we must  upload Reverse Shell on our target Machine
 Like that :
